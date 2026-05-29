@@ -1,0 +1,2 @@
+# mail-sorter
+sorting emails
