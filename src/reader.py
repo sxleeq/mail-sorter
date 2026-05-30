@@ -27,8 +27,10 @@ def find_field(lines, keys):
 
 def parse_email(path):
     filename = os.path.basename(path)
+    if '.' in filename and not filename.endswith('.txt'):
+        return Email(filename, is_readable=False)
     text = read_file(path)
-    if text is None:
+    if text is None or text.strip() == '':
         return Email(filename, is_readable=False)
     lines = text.splitlines()
     sender = find_field(lines, ['from:', 'от кого:', 'ot kogo:'])
