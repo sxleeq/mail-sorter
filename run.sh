@@ -1,8 +1,8 @@
 #!/bin/bash
-echo 'начинаю обработку писем'
+echo 'Начинаю обработку писем'
 if [ -d 'inbox' ]; then
     python3 main.py
 else
-    echo 'папки inbox нет'
+    echo 'Папки inbox нету'
 fi
-echo 'обработка завершина'
+echo 'Обработка завершена'
